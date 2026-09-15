@@ -40,7 +40,6 @@
 
 * [Tuning, telemetria e logs](testes/tuning-e-telemetria.md)
 * [Checklists](testes/checklists.md)
-* [Cronograma de desenvolvimento](temporada/cronograma.md)
 * [Métricas e critérios de pronto](temporada/metricas.md)
 * [Referências](referencias.md)
 
