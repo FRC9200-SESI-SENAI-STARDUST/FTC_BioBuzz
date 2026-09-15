@@ -1,0 +1,13 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+
+site:
+  title: FTC BIOBUZZ
+  structure:
+    - type: space
+      key: ftc-biobuzz
+      title: FTC BIOBUZZ
+      path: guia
+      default: true
+      content:
+        directory: ./
+        language: pt
