@@ -4,6 +4,8 @@ Antes do CAD e antes do primeiro `motor.setPower`, existe uma pergunta que costu
 
 BIOBUZZ é um jogo de ciclos. O robô coleta, armazena, atravessa o campo, alinha e pontua. Cada segundo perdido aparece em algum ponto dessa linha. Às vezes a equipe procura uma solução avançada para o lançamento, mas perde mais tempo mirando o intake. Às vezes o autônomo é ambicioso, mas o magazine trava uma bola a cada três ciclos. O jogo inteiro é uma máquina, e a engrenagem mais fraca sempre acaba aparecendo.
 
+Os valores abaixo seguem o Competition Manual V1. Trate esta página como leitura técnica da versão, não como substituta do manual.
+
 ## Estrutura da partida
 
 | Período | Duração |
@@ -20,6 +22,22 @@ O robô começa com quatro POLLEN e não pode controlar mais de quatro elementos
 | NECTAR | 91 mm |
 
 Vinte milímetros parecem pouco no papel, mas são suficientes para transformar um canal rígido em uma fonte constante de travamentos. Intake, indexador e shooter precisam aceitar a variação sem depender de uma regulagem delicada.
+
+## Pontuação da versão inicial
+
+| Ação | AUTO | TELEOP |
+| --- | ---: | ---: |
+| LEAVE | 3 | não se aplica |
+| PARK | 5 | 5 |
+| HIVE TIP | 20 | 20 |
+| Elemento restante no CELL | não se aplica | 2 |
+| Bottom NECTAR Bonus | não se aplica | 5 |
+| Elemento em FLOWER possuída | não se aplica | 2 |
+| Elemento no GARDEN | não se aplica | 1 |
+
+Nos eventos comuns, os thresholds iniciais são 16 pontos combinados de LEAVE e PARK para SWARM RP, 4 TIPS para POLLINATOR 1 RP e 7 TIPS para POLLINATOR 2 RP. Regionais, Championship e alguns eventos podem usar valores diferentes publicados posteriormente.
+
+FLOWER possui uma janela estratégica importante: a pontuação ali só pode começar quando restar um minuto de partida. Colocar NECTAR antes desse momento entra em conflito com G410. O mecanismo e o operador precisam tornar a intenção clara, e o software pode bloquear automaticamente a ação antes do tempo permitido.
 
 ## Prioridade competitiva
 
@@ -53,6 +71,7 @@ O ciclo deve ser cronometrado por partes: coleta, deslocamento, mira, disparo e 
 Mantenha atenção especial a:
 
 * limite de quatro elementos controlados;
+* regra de tempo para NECTAR no FLOWER;
 * envelope inicial e expansão;
 * interação permitida com FLOWER e HIVE;
 * dispositivos de controle e visão permitidos;
@@ -60,4 +79,3 @@ Mantenha atenção especial a:
 * alterações publicadas em Team Updates e Q&A.
 
 Não desenhe uma peça importante a partir de uma lembrança do manual. Abra a regra, leia o contexto e registre a versão usada na decisão.
-

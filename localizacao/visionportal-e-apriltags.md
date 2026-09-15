@@ -18,6 +18,24 @@ VisionPortal portal = new VisionPortal.Builder()
 
 Consulte os Samples da versão exata do SDK instalada. BIOBUZZ usa SDK 12 e adiciona suporte a AprilTag Clusters. Não misture exemplo antigo de detecção individual com a API de cluster sem revisar tipos e metadados.
 
+Na API nova, a lista pode conter detecções individuais e clusters. Faça a separação explicitamente:
+
+```java
+for (AprilTagDetection detection : currentDetections) {
+    if (detection instanceof AprilTagSingleDetection) {
+        AprilTagSingleDetection single =
+            (AprilTagSingleDetection) detection;
+        // Processar tag individual.
+    } else if (detection instanceof AprilTagClusterDetection) {
+        AprilTagClusterDetection cluster =
+            (AprilTagClusterDetection) detection;
+        // Processar cluster e sua origem comum.
+    }
+}
+```
+
+Confira imports e métodos nos Samples do SDK 12 usado pela equipe. O cluster continua fornecendo pose mesmo com oclusão parcial, embora mais tags visíveis geralmente produzam uma estimativa mais estável.
+
 ## Dados úteis
 
 Para alinhamento relativo ao CELL, procure:
@@ -30,6 +48,10 @@ Para alinhamento relativo ao CELL, procure:
 * pose da câmera em relação ao robô.
 
 Um frame antigo pode possuir números perfeitos para uma posição que já passou. Registre timestamp e descarte medições atrasadas além do limite definido.
+
+## Webcam ou Limelight 3A
+
+A webcam com VisionPortal é o melhor começo para entender e controlar todo o pipeline. A Limelight 3A também é uma opção suportada para acelerar tracking e processamento. Não assuma que outro coprocessador permitido em FRC também é permitido em FTC. Confirme a lista da regra de controle da versão atual.
 
 ## Câmera no robô
 
@@ -76,4 +98,3 @@ cluster > reset global de x, y e heading
 ```
 
 Odometria e IMU navegam. A câmera corrige o último trecho até o alvo.
-

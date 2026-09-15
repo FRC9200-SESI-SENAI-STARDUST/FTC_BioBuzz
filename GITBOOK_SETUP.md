@@ -32,3 +32,5 @@ Não use gradiente, capa ilustrada, animação, cards em excesso ou muitos ícon
 
 O arquivo `.gitbook.yaml` controla a estrutura do conteúdo. Cores e modo escuro ficam no painel, conforme a documentação atual do GitBook.
 
+Referência: [customização oficial de sites no GitBook](https://gitbook.com/docs/manage-your-site/customization).
+

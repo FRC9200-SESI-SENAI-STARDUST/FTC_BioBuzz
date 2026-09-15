@@ -11,6 +11,8 @@ Comece comparando duas opções:
 
 O primeiro costuma ser mais simples e permite controlar o arco com o hood. O segundo pode reduzir o spin, mas usa mais espaço e exige sincronismo entre rodas.
 
+Na versão inicial do campo, a abertura do CELL mede aproximadamente 20 por 14 polegadas e possui cerca de 12 polegadas de profundidade. Use o CAD oficial para projetar trajetória e margem. Abertura grande não elimina a necessidade de repetibilidade, porque o HIVE se move e o elemento precisa permanecer no CELL até a avaliação.
+
 ## Variáveis importantes
 
 * diâmetro e massa do flywheel;
@@ -69,4 +71,3 @@ O feeder só deve agir quando shooter, hood, alinhamento e presença do elemento
 ## Protótipo
 
 Faça uma bancada protegida, grave em câmera lenta e marque a saída do elemento. Teste vinte disparos por configuração. O primeiro tiro depois de alguns segundos parado merece uma coluna própria, porque ele frequentemente revela uma recuperação que a média esconde.
-
